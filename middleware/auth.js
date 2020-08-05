@@ -5,7 +5,7 @@ const auth = async (req, res, next) => {
     let token;
     try {
         token = req.header("Authorization");
-        token = token.replace("Bearer ", "");
+        token = token.replace("Bearer : ", "");
     } catch (e) {
         res.status(401).json();
         return;
